@@ -9,19 +9,21 @@ Order of requested Problems:
 -- Viraj --
 5 - Solved in pdf
 7 - Solved in pdf
-11
-12
-13
-14
+11 - Solved in pdf
+12 - Solved in pdf
+13 - Solved in pdf
+14 - Solved in pdf
 19 - Solved in is_all_uppercase function - Done
 
 -- End of Email Requests --
 
+15 - Solved in split_time
 
 */
 void edge(int *, int *, int);
 void shift(char *, int);
 int is_all_uppercase(char[]);
+void split_time(int, int *, int *, int *);
 
 int main()
 {
@@ -59,7 +61,14 @@ int main()
     // One word from user input
     char oneWord[50];
     scanf("%s", oneWord);
-    printf("%d\n",is_all_uppercase(oneWord));
+    printf("%d\n", is_all_uppercase(oneWord));
+
+    // Test split_time
+
+    int secondsSinceMidnight = 60*60 + 60 + 10;
+    int min, hr, sec;
+    split_time(secondsSinceMidnight, &hr, &min, &sec);
+    printf("%d hours, %d minutes, %d seconds, since midnight\n", hr, min, sec);
 
     return 0;
 }
@@ -105,4 +114,16 @@ int is_all_uppercase(char str[])
         if (*p >= 'a' && *p <= 'z')
             return 0;
     return flag;
+}
+
+void split_time(int total_sec, int *hr, int *min, int *sec)
+{                                // Given seconds since midnight. Split times
+    int minute = total_sec / 60; // At this point contains hours as well
+    *sec = total_sec % 60; // Remainder from this is the seconds
+
+    int hours = minute / 60;
+    minute = minute % 60; // Remainder from this is the minutes.
+
+    *min = minute;
+    *hr = hours;
 }
