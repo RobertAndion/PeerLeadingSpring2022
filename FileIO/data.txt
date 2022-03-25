@@ -1,0 +1,6 @@
+Project1 A 95
+Project2 B 86
+Project3 A 98
+Midterm1 B 80
+Midterm2 A 95
+FinalExam A 92
