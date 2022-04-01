@@ -1,0 +1,7 @@
+6 5
+2014  Nissan  Frontier  Grey  80000
+2020  Kia Telluride Blue  5000
+1998  Jeep  Wrangler  Red  130000
+1999  Jeep  Wrangler  Red  100000
+2009  Jeep  Wrangler  Green  140000
+2019  Alfa  Stelvio  Silver  20000
